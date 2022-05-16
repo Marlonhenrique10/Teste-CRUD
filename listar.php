@@ -79,7 +79,7 @@ $query = mysqli_query($conect, $sql);
                                             <td class="text-center">
                                                 <form action="excluir.php" method="post">
                                                     <input type="text" name="id" value="<?= $id; ?>" hidden>
-                                                    <button type="submit" class="btn btn-danger" title="Excluir">
+                                                    <button type="submit" class="btn btn-danger excluir" title="Excluir" data-codigo-id="<?= $id; ?>" data-codigo-nome="<?= $nome; ?>">
                                                         <i class="fas fa-trash"></i>
                                                     </button>                                                    
                                                 </form>
@@ -143,12 +143,12 @@ $query = mysqli_query($conect, $sql);
                         <div class="row">
                             <div class="col-sm-4">
                                 <label for="telefone"> Telefone</label>
-                                <input type="text" name="telefone" id="telefone" class="form-control form-control-sm">
+                                <input type="text" name="telefone" id="telefone" class="form-control form-control-sm" required>
                             </div> 
                         
                             <div class="col-sm-4">
                                 <label for="cpf">CPF</label>
-                                <input type="text" id="cpf" name="cpf" class="form-control form-control-sm">
+                                <input type="text" id="cpf" name="cpf" class="form-control form-control-sm" required>
                             </div>
                         </div>                              
                         <!-- <input type="submit" value="Enviar"> -->
@@ -186,12 +186,12 @@ $query = mysqli_query($conect, $sql);
                         <div class="row">                            
                             <div class="col-sm-4">
                                 <label for="nome">Nome*</label>
-                                <input type="text" id="addNome" name="nome" class="form-control form-control-sm">                            
+                                <input type="text" id="addNome" name="nome" class="form-control form-control-sm" required>                            
                             </div>
     
                             <div class="col-sm-4">
                                 <label for="sobrenome"> Sobrenome</label>
-                                <input type="text" id="addSobrenome" name="sobrenome" class="form-control form-control-sm">
+                                <input type="text" id="addSobrenome" name="sobrenome" class="form-control form-control-sm" required>
                             </div>
                             
                             <div class="col-sm-2">
@@ -204,7 +204,7 @@ $query = mysqli_query($conect, $sql);
                         <div class="row">
                             <div class="col-sm-6">
                                 <label for="email"> E-mail</label>
-                                <input type="text" id="addEmail" name="email" class="form-control form-control-sm">
+                                <input type="text" id="addEmail" name="email" class="form-control form-control-sm" required>
                             </div>
                         </div>
     
@@ -213,12 +213,12 @@ $query = mysqli_query($conect, $sql);
                         <div class="row">
                             <div class="col-sm-4">
                                 <label for="telefone"> Telefone</label>
-                                <input type="text" name="telefone" id="addTelefone" class="form-control form-control-sm">
+                                <input type="text" name="telefone" id="addTelefone" class="form-control form-control-sm" required>
                             </div> 
                         
                             <div class="col-sm-4">
                                 <label for="cpf">CPF</label>
-                                <input type="text" id="addCpf" name="cpf" class="form-control form-control-sm">
+                                <input type="text" id="addCpf" name="cpf" class="form-control form-control-sm" required>
                             </div>
                         </div>                              
 
@@ -255,25 +255,9 @@ $query = mysqli_query($conect, $sql);
             $("input[id*='telefone']").inputmask({
                 mask: ['(55) 99 9 9999-9999'],
                 keepStatic: true
-            });
+            });          
 
-            jQuery('#modal-cadastrar').modal('show');
-
-            var nome = jQuery('#nome').val();
-            var sobrenome = jQuery('#sobrenome').val();
-            var email = jQuery('#email').val();
-            var telefone = jQuery('#telefone').val();
-            var cpf = jQuery('#cpf').val();
-
-            if(nome == '' && sobrenome == '' && email == '' && telefone == '' && cpf == '') {
-                swal({
-                    title: 'OPS!',
-                    text: 'Nenhum campo pode estar vazio',
-                    icon: 'error',
-                    button: 'OK',
-                });
-                return;
-            }            
+            jQuery('#modal-cadastrar').modal('show');                                   
         });            
 
         jQuery(document).on('click', '.editar', function(){
@@ -291,7 +275,7 @@ $query = mysqli_query($conect, $sql);
             jQuery('#addId').val(id);
             jQuery('#addEmail').val(email);
             jQuery('#addTelefone').val(telefone);
-            jQuery('#addCpf').val(cpf);
+            jQuery('#addCpf').val(cpf);            
 
             $("input[id*='addCpf']").inputmask({
                 mask: ['999.999.999-99'],
