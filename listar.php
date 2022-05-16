@@ -120,12 +120,12 @@ $query = mysqli_query($conect, $sql);
                         <div class="row">                            
                             <div class="col-sm-4">
                                 <label for="nome">Nome*</label>
-                                <input type="text" id="nome" name="nome" class="form-control form-control-sm" required>                            
+                                <input type="text" id="nome" name="nome" class="form-control form-control-sm" required="required">                            
                             </div>
     
                             <div class="col-sm-4">
                                 <label for="sobrenome"> Sobrenome</label>
-                                <input type="text" id="sobrenome" name="sobrenome"  class="form-control form-control-sm" required>
+                                <input type="text" id="sobrenome" name="sobrenome"  class="form-control form-control-sm" required="required">
                             </div>                            
                         </div>
                         
@@ -134,7 +134,7 @@ $query = mysqli_query($conect, $sql);
                         <div class="row">
                             <div class="col-sm-6">
                                 <label for="email"> E-mail</label>
-                                <input type="text" id="email" name="email" class="form-control form-control-sm" required>
+                                <input type="text" id="email" name="email" class="form-control form-control-sm" required="required">
                             </div>
                         </div>
     
@@ -143,12 +143,12 @@ $query = mysqli_query($conect, $sql);
                         <div class="row">
                             <div class="col-sm-4">
                                 <label for="telefone"> Telefone</label>
-                                <input type="text" name="telefone" id="telefone" class="form-control form-control-sm" required>
+                                <input type="text" name="telefone" id="telefone" class="form-control form-control-sm" required="required">
                             </div> 
                         
                             <div class="col-sm-4">
                                 <label for="cpf">CPF</label>
-                                <input type="text" id="cpf" name="cpf" class="form-control form-control-sm" required>
+                                <input type="text" id="cpf" name="cpf" class="form-control form-control-sm" required="required">
                             </div>
                         </div>                              
                         <!-- <input type="submit" value="Enviar"> -->
@@ -186,12 +186,12 @@ $query = mysqli_query($conect, $sql);
                         <div class="row">                            
                             <div class="col-sm-4">
                                 <label for="nome">Nome*</label>
-                                <input type="text" id="addNome" name="nome" class="form-control form-control-sm" required>                            
+                                <input type="text" id="addNome" name="nome" class="form-control form-control-sm" required="required">                            
                             </div>
     
                             <div class="col-sm-4">
                                 <label for="sobrenome"> Sobrenome</label>
-                                <input type="text" id="addSobrenome" name="sobrenome" class="form-control form-control-sm" required>
+                                <input type="text" id="addSobrenome" name="sobrenome" class="form-control form-control-sm" required="required">
                             </div>
                             
                             <div class="col-sm-2">
@@ -204,7 +204,7 @@ $query = mysqli_query($conect, $sql);
                         <div class="row">
                             <div class="col-sm-6">
                                 <label for="email"> E-mail</label>
-                                <input type="text" id="addEmail" name="email" class="form-control form-control-sm" required>
+                                <input type="text" id="addEmail" name="email" class="form-control form-control-sm" required="required">
                             </div>
                         </div>
     
@@ -213,12 +213,12 @@ $query = mysqli_query($conect, $sql);
                         <div class="row">
                             <div class="col-sm-4">
                                 <label for="telefone"> Telefone</label>
-                                <input type="text" name="telefone" id="addTelefone" class="form-control form-control-sm" required>
+                                <input type="text" name="telefone" id="addTelefone" class="form-control form-control-sm" required="required">
                             </div> 
                         
                             <div class="col-sm-4">
                                 <label for="cpf">CPF</label>
-                                <input type="text" id="addCpf" name="cpf" class="form-control form-control-sm" required>
+                                <input type="text" id="addCpf" name="cpf" class="form-control form-control-sm" required="required">
                             </div>
                         </div>                              
 
