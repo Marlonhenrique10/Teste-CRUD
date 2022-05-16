@@ -120,12 +120,12 @@ $query = mysqli_query($conect, $sql);
                         <div class="row">                            
                             <div class="col-sm-4">
                                 <label for="nome">Nome*</label>
-                                <input type="text" id="nome" name="nome" class="form-control form-control-sm">                            
+                                <input type="text" id="nome" name="nome" class="form-control form-control-sm" required>                            
                             </div>
     
                             <div class="col-sm-4">
                                 <label for="sobrenome"> Sobrenome</label>
-                                <input type="text" id="sobrenome" name="sobrenome"  class="form-control form-control-sm">
+                                <input type="text" id="sobrenome" name="sobrenome"  class="form-control form-control-sm" required>
                             </div>                            
                         </div>
                         
@@ -134,7 +134,7 @@ $query = mysqli_query($conect, $sql);
                         <div class="row">
                             <div class="col-sm-6">
                                 <label for="email"> E-mail</label>
-                                <input type="text" id="email" name="email" class="form-control form-control-sm">
+                                <input type="text" id="email" name="email" class="form-control form-control-sm" required>
                             </div>
                         </div>
     
@@ -151,7 +151,7 @@ $query = mysqli_query($conect, $sql);
                                 <input type="text" id="cpf" name="cpf" class="form-control form-control-sm">
                             </div>
                         </div>                              
-
+                        <!-- <input type="submit" value="Enviar"> -->
                         <div class="modal-footer">
                             <div class="row mb-3">
                                 <div class="col-md">
@@ -271,7 +271,7 @@ $query = mysqli_query($conect, $sql);
                     text: 'Nenhum campo pode estar vazio',
                     icon: 'error',
                     button: 'OK',
-                }, 5000);
+                });
                 return;
             }            
         });            
