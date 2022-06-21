@@ -3,8 +3,11 @@
     $host = 'localhost';
     $user = 'root';
     $senha = '';
-    $bd_name = 'tabela_usuario';
+    $bd_name = 'planos_seguro';
 
-    $conect = mysqli_connect($host, $user, $senha, $bd_name);    
+    if($bd_name)
+    {           
+        $conect = mysqli_connect($host, $user, $senha, $bd_name);    
+    }
 
 ?>

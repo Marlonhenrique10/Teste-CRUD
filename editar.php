@@ -1,17 +1,27 @@
 <?php 
 
-include 'conexao.php';
+    include 'conexao.php';
 
-$id = $_POST['id'];
-$nome = $_POST['nome'];
-$sobrenome = $_POST['sobrenome'];
-$email = $_POST['email'];
-$telefone = $_POST['telefone'];
-$cpf = $_POST['cpf'];
+    $id = $_POST['id'];
+    $operadora = $_POST['operadora'];
+    $planos = $_POST['plano'];
+    $valorPlano = $_POST['vlPlano'];
+    $coparticipacao = $_POST['coparticipacao'];
+    $cobertura = $_POST['cobertura'];
+    $hospital = $_POST['hospital'];
+    $valoRembolso = $_POST['vlRembolso'];
+    $logo = $_POST['editar-imagem'];
+    $nomeOperadora = $_POST['nomeOperadora'];
+    $visualizar = $_POST['visivel'];
+    
+    $sql = "UPDATE informacao
+                SET operadora = '$operadora', planos = $planos, valor_plano = '$valorPlano', 
+                    coparticipacao = '$coparticipacao', cobertura = '$cobertura', hospital = '$hospital',
+                    valor_rembolso = '$valoRembolso', logo = '$logo', nome_operadora = '$nomeOperadora', visualizar = '$visualizar' 
+                WHERE id = '$id'";
+    
+    $query_cadastrar = mysqli_query($conect, $sql);
 
-$sql = "UPDATE usuario SET nome = '$nome', sobrenome = '$sobrenome', email = '$email', telefone = '$telefone', cpf = '$cpf' WHERE id = '$id'";
-$query_cadastrar = mysqli_query($conect, $sql);
-
-header('location:listar.php');
+    header('location:listar.php');
 
 ?>
