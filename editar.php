@@ -19,7 +19,7 @@
                     coparticipacao = '$coparticipacao', cobertura = '$cobertura', hospital = '$hospital',
                     valor_rembolso = '$valoRembolso', logo = '$logo', nome_operadora = '$nomeOperadora', visualizar = '$visualizar' 
                 WHERE id = '$id'";
-    print_r($sql);exit;
+    
     $query_cadastrar = mysqli_query($conect, $sql);
 
     header('location:listar.php');
