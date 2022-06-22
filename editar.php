@@ -15,7 +15,7 @@
     $visualizar = $_POST['visivel'];
     
     $sql = "UPDATE informacao
-                SET operadora = '$operadora', planos = $planos, valor_plano = '$valorPlano', 
+                SET operadora = '$operadora', planos = '$planos', valor_plano = '$valorPlano', 
                     coparticipacao = '$coparticipacao', cobertura = '$cobertura', hospital = '$hospital',
                     valor_rembolso = '$valoRembolso', logo = '$logo', nome_operadora = '$nomeOperadora', visualizar = '$visualizar' 
                 WHERE id = '$id'";
