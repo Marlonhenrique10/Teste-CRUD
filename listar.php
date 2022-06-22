@@ -148,14 +148,14 @@ $query = mysqli_query($conect, $sql);
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <td class="text-center"><?= $operadora; ?></td>
+                                                <td class="text-center"><?php echo $operadora; ?></td>
                                                 <td class="text-center"><?= $planos; ?></td>
                                                 <td class="text-center"><?= 'R$' . $valorPlano; ?></td>
                                                 <td class="text-center"><?= $coparticipacao . '%'; ?></td>
                                                 <td class="text-center"><?= $cobertura; ?></td>
                                                 <td class="text-center"><?= $hospital; ?></td>
                                                 <td class="text-center"><?= 'R$' . $valorRembolso; ?></td>
-                                                <td class="text-center"><?= $nomeOperadora; ?></td>     
+                                                <td class="text-center"><?= $nomeOperadora; ?></td>                                                
                                                 <td class="text-center">
                                                     <button class="btn btn-dark btn-editar" title="Editar" data-codigo-id="<?= $id; ?>" data-codigo-operadora="<?= $operadora; ?>" data-codigo-plano="<?= $planos; ?>" data-valor-plano="<?= $valorPlano; ?>" data-codigo-coparticipacao="<?= $coparticipacao; ?>" data-codigo-cobertura="<?= $cobertura; ?>" data-codigo-hospital="<?= $hospital; ?>" data-valor-rembolso="<?=  $valorRembolso; ?>" data-codigo-logo="<?= $logo; ?>" data-nome-operadora="<?= $nomeOperadora; ?>" data-codigo-visualizar="<?= $visualizar; ?>">
                                                         <i class="fa fa-edit"></i>                                            
